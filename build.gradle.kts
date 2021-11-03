@@ -9,6 +9,7 @@ plugins {
     id("org.jetbrains.changelog")
     id("org.jetbrains.gradle.plugin.idea-ext")
     id("com.nisecoder.idea-ext-ext")
+    id("com.nisecoder.github-pages.asciidoctor")
     id("org.asciidoctor.jvm.convert")
 }
 
@@ -46,16 +47,6 @@ tasks {
     val changelog: ChangelogPluginExtension = extensions.getByType()
     patchPluginXml {
         changeNotes.set(provider { changelog.getLatest().toHTML()} )
-    }
-
-    asciidoctor {
-        // collect into root buildDirectory for publishing to GitHub Pages
-        val outputDir = if (project == rootProject) {
-            rootProject.buildDir.resolve("docs/asciidoc")
-        } else {
-            rootProject.buildDir.resolve("docs/asciidoc/${project.name}")
-        }
-        setOutputDir(outputDir)
     }
 
     withType<KotlinCompile>().configureEach {
