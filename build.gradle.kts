@@ -40,6 +40,13 @@ intellij {
     plugins.set(listOf("org.jetbrains.plugins.gradle"))
 }
 
+kotlin {
+    jvmToolchain {
+        (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of(11))
+    }
+}
+
+
 tasks {
     runIde {
         autoReloadPlugins.set(true)
@@ -49,14 +56,8 @@ tasks {
         changeNotes.set(provider { changelog.getLatest().toHTML()} )
     }
 
-    withType<JavaCompile>().configureEach {
-        sourceCompatibility = JavaVersion.VERSION_11.toString()
-        targetCompatibility = JavaVersion.VERSION_11.toString()
-    }
-
     withType<KotlinCompile>().configureEach {
         kotlinOptions {
-            targetCompatibility = JavaVersion.VERSION_11.toString()
             apiVersion = "1.5"
             languageVersion = "1.5"
             javaParameters = true
