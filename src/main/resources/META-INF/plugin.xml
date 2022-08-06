@@ -6,6 +6,5 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow anchor="right" factoryClass="com.nisecoder.intellij.plugins.atcoder.AtCoderWindowFactory" id="AtCoder" />
-        <projectService serviceImplementation="com.nisecoder.intellij.plugins.atcoder.AtCoderWindowService" />
     </extensions>
 </idea-plugin>
