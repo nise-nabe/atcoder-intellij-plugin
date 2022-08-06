@@ -57,6 +57,10 @@ tasks {
         changeNotes.set(provider { changelog.getLatest().toHTML()} )
     }
 
+    buildSearchableOptions {
+        enabled = false
+    }
+
     withType<KotlinCompile>().configureEach {
         kotlinOptions {
             // https://plugins.jetbrains.com/docs/intellij/kotlin.html#adding-kotlin-support
