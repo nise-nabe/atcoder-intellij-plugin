@@ -59,8 +59,9 @@ tasks {
 
     withType<KotlinCompile>().configureEach {
         kotlinOptions {
-            apiVersion = "1.5"
-            languageVersion = "1.5"
+            // https://plugins.jetbrains.com/docs/intellij/kotlin.html#adding-kotlin-support
+            apiVersion = "1.6"
+            languageVersion = "1.6"
             javaParameters = true
         }
     }
