@@ -1,0 +1,6 @@
+<idea-plugin>
+    <id>com.nisecoder.intellij.atcoder</id>
+    <name>AtCoder</name>
+    <description>AtCoder Plugin to support solve problem on Intellij IDEA</description>
+    <vendor url="https://github.com/nise-nabe/atcoder-intellij-plugin">nise_nabe</vendor>
+</idea-plugin>
