@@ -35,7 +35,7 @@ idea {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version.set("2021.2.3")
+    version.set("2022.2")
     type.set("IU")
     downloadSources.set(true)
     plugins.set(listOf("org.jetbrains.plugins.gradle"))
@@ -43,7 +43,7 @@ intellij {
 
 kotlin {
     jvmToolchain {
-        (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of(11))
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
 
@@ -57,10 +57,15 @@ tasks {
         changeNotes.set(provider { changelog.getLatest().toHTML()} )
     }
 
+    buildSearchableOptions {
+        enabled = false
+    }
+
     withType<KotlinCompile>().configureEach {
         kotlinOptions {
-            apiVersion = "1.5"
-            languageVersion = "1.5"
+            // https://plugins.jetbrains.com/docs/intellij/kotlin.html#adding-kotlin-support
+            apiVersion = "1.6"
+            languageVersion = "1.6"
             javaParameters = true
         }
     }
