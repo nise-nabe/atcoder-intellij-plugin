@@ -18,7 +18,8 @@ pluginManagement {
     }
 
     plugins {
-        kotlin("jvm") version "1.6.21"
+        // https://plugins.jetbrains.com/docs/intellij/kotlin.html#kotlin-gradle-plugin
+        kotlin("jvm") version "1.7.10"
         id("org.jetbrains.intellij") version "1.8.0"
         id("org.jetbrains.gradle.plugin.idea-ext") version "1.1.6"
         id("org.asciidoctor.jvm.convert") version "3.+"
