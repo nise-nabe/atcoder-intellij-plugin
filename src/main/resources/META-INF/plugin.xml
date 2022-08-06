@@ -3,4 +3,9 @@
     <name>AtCoder</name>
     <description>AtCoder Plugin to support solve problem on Intellij IDEA</description>
     <vendor url="https://github.com/nise-nabe/atcoder-intellij-plugin">nise_nabe</vendor>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow anchor="right" factoryClass="com.nisecoder.intellij.plugins.atcoder.AtCoderWindowFactory" id="AtCoder" />
+        <projectService serviceImplementation="com.nisecoder.intellij.plugins.atcoder.AtCoderWindowService" />
+    </extensions>
 </idea-plugin>
