@@ -23,7 +23,7 @@ pluginManagement {
         id("org.jetbrains.intellij") version "1.8.1"
         id("org.jetbrains.gradle.plugin.idea-ext") version "1.1.6"
         id("org.asciidoctor.jvm.convert") version "3.+"
-        id("org.jetbrains.changelog") version "1.3.1"
+        id("org.jetbrains.changelog") version "2.0.0"
         id("com.nisecoder.idea-ext-ext") version "0.0.8"
         id("com.nisecoder.github-pages.asciidoctor") version "0.0.8"
         id("com.nisecoder.github-release-upload") version "0.0.8"
