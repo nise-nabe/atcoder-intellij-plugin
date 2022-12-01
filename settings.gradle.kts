@@ -21,7 +21,7 @@ pluginManagement {
         // https://plugins.jetbrains.com/docs/intellij/kotlin.html#kotlin-gradle-plugin
         kotlin("jvm") version "1.7.10"
         id("org.jetbrains.intellij") version "1.10.0"
-        id("org.jetbrains.gradle.plugin.idea-ext") version "1.1.6"
+        id("org.jetbrains.gradle.plugin.idea-ext") version "1.1.7"
         id("org.asciidoctor.jvm.convert") version "3.+"
         id("org.jetbrains.changelog") version "1.3.1"
         id("com.nisecoder.idea-ext-ext") version "0.0.8"
